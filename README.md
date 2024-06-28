@@ -94,7 +94,7 @@ Die restlichen Felder werden mit der jsonize-Funktion je Datensatz exportiert (`
 Nach dem Export erhält man eine Textdatei, z. B. `export.txt` die noch mit folgendem Befehl bereinigt werden muss.
 
 ```bash 
-sed -e 's/\"\[\\\"/"/g' -e 's/\\"/"/g' -e 's/\"\]\"/"/g'  export.txt > export.json` 
+sed -e 's/\"\[\\\"/"/g' -e 's/\\"/"/g' -e 's/\"\]\"/"/g'  export.txt > export.json 
 ```
 Der sed-Befehl entfernt die eckigen Klammern und maskierte Anführungszeichen die von OpenRefine beim Export in die export.txt geschrieben werden, d. h. die Zeichenketten (`\"[\"`, `\"]\"` und `\"`) die durch einfache Anführungszeichen ersetzt werden müssen.
 
